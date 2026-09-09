@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grape Tag VR - Download</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            color: white;
+            margin-bottom: 50px;
+        }
+        
+        .header h1 {
+            font-size: 48px;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        
+        .header p {
+            font-size: 18px;
+            opacity: 0.9;
+        }
+        
+        .content {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+        }
+        
+        .download-section {
+            text-align: center;
+            margin: 40px 0;
+        }
+        
+        .download-btn {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 18px 50px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.4);
+            cursor: pointer;
+            border: none;
+        }
+        
+        .download-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(102, 126, 234, 0.6);
+        }
+        
+        .download-btn:active {
+            transform: translateY(-1px);
+        }
+        
+        .file-info {
+            background: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .file-info h3 {
+            margin-bottom: 15px;
+            color: #333;
+        }
+        
+        .info-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #e0e0e0;
+        }
+        
+        .info-item:last-child {
+            border-bottom: none;
+        }
+        
+        .features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+        
+        .feature-card {
+            background: #f9f9f9;
+            padding: 25px;
+            border-radius: 10px;
+            border-left: 4px solid #667eea;
+        }
+        
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card p {
+            color: #666;
+            line-height: 1.6;
+        }
+        
+        .requirements {
+            background: #fff3cd;
+            border: 2px solid #ffc107;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .requirements h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+        
+        .requirements ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+        
+        .requirements li {
+            margin: 8px 0;
+        }
+        
+        .instructions {
+            background: #e8f4f8;
+            border: 2px solid #17a2b8;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 30px 0;
+        }
+        
+        .instructions h3 {
+            color: #0c5460;
+            margin-bottom: 10px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+            color: #0c5460;
+        }
+        
+        .instructions li {
+            margin: 8px 0;
+            line-height: 1.6;
+        }
+        
+        .links {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .link-btn {
+            display: inline-block;
+            padding: 10px 20px;
+            background: #f0f0f0;
+            color: #333;
+            text-decoration: none;
+            border-radius: 25px;
+            transition: all 0.3s;
+            border: 2px solid #667eea;
+        }
+        
+        .link-btn:hover {
+            background: #667eea;
+            color: white;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #666;
+            font-size: 14px;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            background: #28a745;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        
+        @media (max-width: 600px) {
+            .header h1 {
+                font-size: 32px;
+            }
+            
+            .content {
+                padding: 20px;
+            }
+            
+            .download-btn {
+                padding: 15px 40px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🍇 Grape Tag VR</h1>
+            <p>A Multiplayer VR Hangout Experience for Meta Quest</p>
+        </div>
+        
+        <div class="content">
+            <div class="status-badge">🚀 Ready for Download</div>
+            
+            <div class="download-section">
+                <h2>Download Grape Tag VR</h2>
+                <p style="margin: 15px 0; color: #666;">Get the APK for Meta Quest 2/3</p>
+                <button class="download-btn" onclick="downloadAPK()">
+                    📥 Download APK
+                </button>
+            </div>
+            
+            <div class="file-info">
+                <h3>📦 Build Information</h3>
+                <div class="info-item">
+                    <span>File Name:</span>
+                    <strong>GrapeTagVR-v1.0.apk</strong>
+                </div>
+                <div class="info-item">
+                    <span>File Size:</span>
+                    <strong>~250-300 MB</strong>
+                </div>
+                <div class="info-item">
+                    <span>Version:</span>
+                    <strong>1.0.0</strong>
+                </div>
+                <div class="info-item">
+                    <span>Platform:</span>
+                    <strong>Meta Quest 2, Quest 3, Quest Pro</strong>
+                </div>
+                <div class="info-item">
+                    <span>Min Android API:</span>
+                    <strong>Level 29</strong>
+                </div>
+            </div>
+            
+            <div class="features">
+                <div class="feature-card">
+                    <h3>🎮 Arm Swing Movement</h3>
+                    <p>Natural Gorilla Tag-style locomotion using hand swinging gestures.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👥 Multiplayer Hangout</h3>
+                    <p>Connect with up to 20 friends in shared virtual spaces.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🎙️ Voice Chat</h3>
+                    <p>Talk to other players with built-in spatial audio communication.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>✋ Hand Gestures</h3>
+                    <p>Express yourself with wave, thumbs up, pointing, and more gestures.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>👤 Custom Avatars</h3>
+                    <p>Personalize your appearance with various avatar options.</p>
+                </div>
+                <div class="feature-card">
+                    <h3>🌍 Multiple Environments</h3>
+                    <p>Explore different themed hangout spaces and environments.</p>
+                </div>
+            </div>
+            
+            <div class="requirements">
+                <h3>⚙️ System Requirements</h3>
+                <ul>
+                    <li><strong>Headset:</strong> Meta Quest 2, Quest 3, or Quest Pro</li>
+                    <li><strong>Storage:</strong> At least 500 MB free space</li>
+                    <li><strong>Internet:</strong> Stable WiFi or mobile connection for multiplayer</li>
+                    <li><strong>Hand Tracking:</strong> Optional but recommended for best experience</li>
+                </ul>
+            </div>
+            
+            <div class="instructions">
+                <h3>📱 Installation Instructions</h3>
+                <ol>
+                    <li>Download the APK file using the button above</li>
+                    <li>Enable Developer Mode on your Meta Quest headset (Settings → About → Tap Build Number 10 times)</li>
+                    <li>Connect your Quest to a computer via USB cable</li>
+                    <li>Open Command Prompt/Terminal and run: <code>adb install GrapeTagVR-v1.0.apk</code></li>
+                    <li>Wait for installation to complete</li>
+                    <li>Launch the app from your Apps Library on the Quest</li>
+                    <li>Grant permissions for microphone and hand tracking</li>
+                    <li>Enjoy hanging out with friends!</li>
+                </ol>
+            </div>
+            
+            <div class="links">
+                <a href="https://github.com/grapegrab/grape-tag-vr" class="link-btn">🔗 GitHub Repository</a>
+                <a href="https://github.com/grapegrab/grape-tag-vr/blob/main/BUILD_APK.md" class="link-btn">📖 Build Guide</a>
+                <a href="https://github.com/grapegrab/grape-tag-vr/blob/main/README.md" class="link-btn">📚 Documentation</a>
+            </div>
+            
+            <div class="footer">
+                <p>🍇 Grape Tag VR - A VR Hangout Experience for Meta Quest</p>
+                <p>Made with ❤️ by grapegrab | Licensed under MIT</p>
+                <p>Inspired by Gorilla Tag by Another Axiom</p>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        function downloadAPK() {
+            // In a real deployment, this would link to your APK hosting location
+            // For now, it shows an alert with instructions
+            alert(
+                'APK Download Instructions:\n\n' +
+                '1. Download from GitHub Releases: https://github.com/grapegrab/grape-tag-vr/releases\n\n' +
+                '2. Or build it yourself:\n' +
+                '   - Open project in Unity 2022.3.15f1\n' +
+                '   - Follow BUILD_APK.md guide\n' +
+                '   - Run "Build and Run" to deploy to your Quest\n\n' +
+                'Visit GitHub for the latest builds!'
+            );
+            
+            // Redirect to releases page
+            window.location.href = 'https://github.com/grapegrab/grape-tag-vr/releases';
+        }
+    </script>
+</body>
+</html>
